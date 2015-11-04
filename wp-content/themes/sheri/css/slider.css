@@ -1,0 +1,96 @@
+.slider { 
+	width:1200px; 
+	position:relative;
+	z-index: 1; 
+}
+.slider-content {
+	width:1200px;
+	height:552px;
+	overflow: hidden;
+	
+	position:relative;
+}
+.slide {
+	width:1200px; 
+	height:552px;
+}
+.slider-controls {
+	position:absolute;
+	right:15px;
+	bottom:12px;
+	text-align:center;
+}
+.slider-controls .control-slide {
+	margin:2px;
+	display:inline-block;
+	width:16px;
+	height:16px;
+	overflow:hidden;
+	text-indent:-9999px;
+	background:url(radioBg.png) center bottom no-repeat;
+}
+.slider-controls .control-slide:hover {
+	cursor:pointer;
+	background-position:center center;
+}
+.slider-controls .control-slide.active {
+	background-position:center top;
+}
+.prew, .next {
+	display:none;
+	width:15px;
+	height:100%;
+	position:absolute;
+	top:0;
+	overflow:hidden;
+	text-indent:-999px;
+	background:url(arrowBg.png) left center no-repeat;
+	opacity:0.8;
+	z-index:3;
+}
+.prew {
+	left:10px;
+}
+.next {
+	right:10px;
+	background:url(arrowBg.png) right center no-repeat;
+}
+.prew:hover, .next:hover {
+	opacity:1;
+}
+.slider-content:hover .prew, .slider-content:hover .next {
+	display:block;
+}
+
+div.slider_title{
+
+position: absolute;
+text-align: center;
+top: 206px;
+width: 1100px;
+padding-left: 10%;
+}
+
+div.slider_title > h1{
+	color: #000;
+font-size: 56px;
+font-weight: normal;
+}
+
+div.slider_title > h3{
+	color: #000;
+font-size: 27px;
+font-weight: normal;
+}
+
+div.slider_title > h1:before{
+	content: '“';
+	color:#ee1c24;
+	font-size: 56px;
+}
+
+div.slider_title > h1:after{
+	content: '”';
+	color:#ee1c24;
+	font-size: 56px;
+}

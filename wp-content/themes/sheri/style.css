@@ -1,0 +1,1550 @@
+/*
+Theme Name: Sheri
+Theme URI: http://wordpress.org/themes/twentytwelve
+Author: the WordPress team
+Author URI: http://wordpress.org/
+Description: The 2012 theme for WordPress is a fully responsive theme that looks great on any device. Features include a front page template with its own widgets, an optional display font, styling for post formats on both index and single views, and an optional no-sidebar page template. Make it yours with a custom menu, header image, and background.
+Version: 1.5
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: light, gray, white, one-column, two-columns, right-sidebar, fluid-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
+Text Domain: twentytwelve
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/* =Notes
+--------------------------------------------------------------
+This stylesheet uses rem values with a pixel fallback. The rem
+values (and line heights) are calculated using two variables:
+
+$rembase:     14;
+$line-height: 24;
+
+---------- Examples
+
+* Use a pixel value with a rem fallback for font-size, padding, margins, etc.
+	padding: 5px 0;
+	padding: 0.357142857rem 0; (5 / $rembase)
+
+* Set a font-size and then set a line-height based on the font-size
+	font-size: 16px
+	font-size: 1.142857143rem; (16 / $rembase)
+	line-height: 1.5; ($line-height / 16)
+
+---------- Vertical spacing
+
+Vertical spacing between most elements should use 24px or 48px
+to maintain vertical rhythm:
+
+.my-new-div {
+	margin: 24px 0;
+	margin: 1.714285714rem 0; ( 24 / $rembase )
+}
+
+---------- Further reading
+
+http://snook.ca/archives/html_and_css/font-size-with-rem
+http://blog.typekit.com/2011/11/09/type-study-sizing-the-legible-letter/
+
+
+/* =Reset
+-------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+
+
+
+
+
+
+
+
+body {
+/*font-family: 'PT Serif', serif;*/
+
+font-family: 'PT Serif', serif;	
+} 
+
+
+
+div#page{
+	display: block;
+	width: 1200px;
+	margin: 0 auto;
+}
+
+header{
+background-color: #ee1c24;
+display: block;
+min-height: 132px;
+width: 1200px;
+}
+
+ 
+
+.wrapper{
+	display: block;
+	width: 1200px;
+	min-height: 1px;
+}
+
+footer{
+display: block;
+width: 1200px;
+}
+
+a#logo{
+display: inline;
+float: left;
+margin-right: 63px;
+padding-left: 25px;
+padding-top: 8px;
+}
+
+div.social_top{
+display: block;
+float: left;
+padding-left: 1px;
+padding-top: 56px;
+width: 162px;
+}
+
+header hgroup.header_top{
+height: 132px;
+width: 100%;
+}
+
+span.certified{
+color: #fff;
+display: block;
+float: left;
+font-size: 13px;
+padding-right: 22px;
+z-index: 2;
+padding-top: 2px;
+}
+
+.clear{
+	clear: both;
+}
+
+.footer_left,
+.footer_center,
+.footer_right
+{
+	float: left;
+}
+
+.footer_left,
+.footer_right{
+background-color: #eeefef;
+height: 410px;
+width: 364px;
+}
+
+.footer_center{
+	width: 472px;
+	background-color: #cb2126;
+	height: 477px;
+	position: relative;
+	top: -32px;
+	box-shadow:  1px -3px 14px rgba(173, 22, 27, 0.61);
+	-moz-box-shadow:  1px -3px 14px rgba(173, 22, 27, 0.61);
+	-webkit-box-shadow:  1px -3px 14px rgba(173, 22, 27, 0.61);
+}
+
+.footer_copyright{
+height: 34px;
+width: 100%;
+}
+
+div.footer_copyright p span{
+	font-size: 14px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+}
+
+div.footer_left p:nth-of-type(1),
+div.footer_right p:nth-of-type(1)
+
+ {
+color: #ed1c24;
+font-size: 21px;
+padding-bottom: 28px;
+padding-left: 52px;
+padding-top: 42px;
+  
+}
+
+
+div.footer_copyright p:nth-of-type(1){
+	 
+	width: 85%;
+	float: left;
+}
+
+
+.color_grey{
+	color:#6d6e70;
+}
+
+
+
+
+div.footer_left div.footer_contacts{
+display: block;
+width: 100%;
+padding-left: 52px;
+}
+
+
+div.footer_icon{
+display: inline;
+float: left;
+width: 30px;
+}
+
+div.footer_content{
+display: inline;
+float: left;
+padding-bottom: 21px;
+}
+
+div.footer_right_menu{
+display: block;
+height: 35px;
+padding-left: 51px;
+}
+
+.footer_img_bottom_social{
+	padding-right: 10px;
+}
+
+h1#footer_latest_posts{
+color: #fff;
+font-size: 32px;
+font-weight: normal;
+padding-top: 37px;
+text-align: center;
+} 
+
+div#sheri_intro{
+background-position: 0 627px;
+background-repeat: no-repeat;
+padding-bottom: 51px;
+padding-top: 48px;
+width: 100%;
+}
+
+div#sheri_intro div.logo{
+	width: 144px;
+	height: 122px;
+	margin: 0 auto;
+	display: block;
+}
+
+section{
+	width: 996px;
+	margin: 0 auto;
+	display: block;
+}
+
+div#sheri_intro section p{
+color: #fff;
+line-height: 30px;
+padding-top: 32px;
+text-align: center;
+}
+
+div#sheri_intro section h2{
+ 
+ 
+font-weight: bold;
+padding-bottom: 47px;
+padding-top: 113px;
+text-align: center;
+text-transform: capitalize;
+
+
+color: #fff;
+font-size: 44px;
+text-align: center;
+
+
+
+}
+
+div.rules{
+	width: 240px;
+	height: 373px;
+	display: inline;
+	float: left;
+	border: 2px solid #e8b9a9;
+	margin-right: 36px;
+	
+}
+
+div.rules:nth-of-type(5){
+border: 2px solid #e8b9a9;
+display: inline;
+float: left;
+height: 373px;
+margin-right: 0;
+width: 240px;
+}
+
+div.rules.rule_1{
+ 
+	margin-left: 67px;
+	
+}
+
+
+ 
+
+div.rules div.number{
+	width: inherit;
+	height: 131px;
+	display: block;
+	font-size: 123px;
+	color:#FFF;
+	text-align: center;
+	
+}
+
+
+div.rules div.title{
+color: #fff;
+display: block;
+font-size: 27px;
+font-weight: bold;
+height: 32px;
+padding-top: 11px;
+text-align: center;
+text-transform: uppercase;
+width: inherit;
+}
+
+div.rules div.body p{
+	color: #fff;
+display: block;
+font-size: 16px;
+line-height: 23px;
+padding-left: 8px;
+padding-right: 8px;
+padding-top: 33px;
+text-align: center;
+width: inherit; 
+	
+}
+
+div#sheri_right{
+padding-bottom: 66px;
+padding-top: 69px;
+width: 100%;
+}
+
+div#sheri_right section h2{
+	color: #FFFFFF;
+font-size: 60px;
+text-align: center;
+}
+
+div#sheri_right section p{
+color: #FFFFFF;
+line-height: 30px;
+padding-top: 23px;
+text-align: center;
+}
+
+button.consultation{
+background-color: #ffffff;
+border: 0 none;
+color: #cb2126;
+cursor: pointer;
+display: block;
+font-size: 13.5px;
+height: 48px;
+margin: 46px auto 0;
+text-transform: uppercase;
+width: 385px;
+}
+
+
+div#sheri_why{
+padding-bottom: 88px;
+padding-top: 69px;
+width: 100%;
+}
+
+div#sheri_why section h2{
+	font-size: 44px;
+	color:#FFF;
+	text-align: center;
+}
+
+div#sheri_why section p{
+	padding-top: 39px;
+	color:#FFF;
+	text-align: center;
+}
+
+div#sheri_testimonials{
+	height: 454px;
+width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+
+div#sheri_testimonials{
+	padding-top: 90px;
+	
+}
+
+div#sheri_testimonials section h2{
+	color:#ee1c24;
+	font-size: 60px;
+	text-align: center;
+	padding-bottom: 25px;
+	
+}
+
+div.testimonials_width_box{
+	width: 800px;
+	display: block;
+	margin: 0 auto;
+	
+}
+
+div.testimonials_width_box p{
+	color:#404041;
+	line-height: 30px;
+	text-align: center;
+	font-size: 17px;
+	padding-bottom: 25px;
+	
+}
+
+div.testimonials_width_box p:before{
+	color:#ee1c24;
+content: "“";
+	
+}
+
+div.testimonials_width_box p:after{
+	color:#ee1c24;
+content: "”";
+	
+}
+
+
+div.testimonials_width_box span{
+	color:#404041;
+	line-height: 30px;
+	text-align: center;
+	font-size: 17px;
+	padding-bottom: 25px;
+	display: block;
+	color:#6d6e70;
+	font-size: 20px;
+	
+}
+
+div#sheri_contactus{
+background-color: #f03f36;
+height: 872px;
+padding-top: 67px;
+}
+
+
+div#sheri_contactus section h2{
+	color:#FFF;
+	font-size: 44px;
+	text-align: center;
+}
+
+form{
+	margin-top: 48px;
+}
+
+input[type="text"],
+input[type="email"]
+{
+background-color: #f26d6a;
+display: block;
+height: 47px;
+margin-bottom: 12px;
+margin-left: 61px;
+width: 1080px;
+padding-left: 25px;
+font-family: 'PT Serif', serif;
+	
+}
+
+textarea{
+	background-color: #f26d6a;
+font-family: "PT Serif",serif;
+height: 140px;
+margin-bottom: 12px;
+margin-left: 61px;
+padding-left: 25px;
+width: 1080px;
+padding-top: 10px;
+}
+
+
+input[placeholder], [placeholder], *[placeholder] {
+   color:white !important;
+   font-size: 19.8px !important;
+}
+
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #FFF;
+    font-size: 19.8px !important;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #FFF;
+   opacity:  1;
+   font-size: 19.8px !important;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #FFF;
+   opacity:  1;
+   font-size: 19.8px !important;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:    #FFF;
+   font-size: 19.8px !important;
+}
+
+
+input[type="submit"]
+{
+background-color: #cb2126;
+color: #fff;
+display: block;
+font-family: "PT Serif",serif;
+font-size: 22.5px;
+height: 47px;
+margin-bottom: 12px;
+margin-left: 61px;
+padding-left: 25px;
+text-transform: uppercase;
+width: 1080px;
+margin-top: 21px;
+cursor: pointer;
+}
+
+div.captcha_left{
+display: block;
+margin: 0 auto;
+width: 1078px;
+}
+
+div.captcha_enter_code_title{
+	color: #fff;
+padding-bottom: 12px;
+	
+}
+
+
+input#letters_code.clear{
+	margin-left: 0;
+	width: 1080px;
+}
+
+div.cant_see{
+	display: block;
+	margin-bottom: 15px;
+	color:#FFF;
+}
+
+hr{
+	display: block;
+	margin: 0 auto;
+}
+
+
+.banner{
+	width: 100%;
+	height: 373px;
+	 
+
+}
+
+div.banner_inner{
+	width: 100%;
+	height: 377px;
+	position: relative;
+
+}
+
+
+
+div.banner_inner h1{
+color: #404041;
+font-size: 53px;
+position: absolute;
+top: 254px;
+right: 58px;
+}
+
+div.about_us{
+	padding-top: 35px; 
+	padding-bottom: 57px;
+		background-image: url(http://www.shfamilylaw.ca/wp-content/themes/sheri/images/background/aboutus_bg.png);
+}
+
+div.about_us section p{
+color: #404041;
+line-height: 25px;
+padding-top: 40px;
+text-align: center;
+}
+
+div.our_team{
+	width: 1200px;
+	height: 377px;
+		background-image: url(http://www.shfamilylaw.ca/wp-content/themes/sheri/images/background/our_team_bg.png);
+}
+
+
+div.our_team section h1{
+	font-size: 44px;
+	color:#FFF;
+	text-align: center;
+	padding-top: 65px;
+}
+
+div.our_team section p{
+	padding-top: 39px;
+	color:#FFF;
+	text-align: center;
+	line-height: 30px;
+}
+
+div.members{
+	width: 1200px;
+	height: 604px;
+	padding-top: 137px;
+}
+
+div.member_box{
+	width: 242px;
+	height: 312px;
+	background-image: url(http://www.shfamilylaw.ca/wp-content/themes/sheri/images/background/member_box_bg.png);
+	display: inline;
+	margin-left: 116px;
+	float: left;
+}
+
+div.member_box div.header{
+	width: inherit;
+	height: 105px;
+}
+
+div.header h1{
+color: #fff;
+font-size: 17px;
+font-weight: normal;
+padding-top: 19px;
+text-align: center;
+}
+
+div.member_box div.header span{
+color: #fff;
+display: block;
+font-size: 21px;
+font-weight: normal;
+text-align: center;
+}
+
+div.members div.member_box div.photo{
+	text-align: center;
+}
+
+div.members div.member_box div.email{
+	text-align: center;
+padding-top: 14px;
+}
+
+div.member_inner_page{
+background-color: #58585a;
+background-image: url("http://www.shfamilylaw.ca/wp-content/themes/sheri/images/background/member_inner_page_bg.png");
+height: 449px;
+margin-left: 65px;
+margin-top: 65px;
+width: 1068px;
+}
+
+div.member_inner_photo{
+display: inline;
+float: left;
+height: inherit;
+width: 359px;
+}
+
+div.member_inner_photo img{
+	padding-left: 43px;
+	padding-top: 32px;
+}
+
+div.member_info{
+display: inline;
+float: left;
+height: inherit;
+overflow: hidden;
+width: 705px;
+position: relative;
+}
+
+div.member_inner_page div.member_info h1{
+	color:#FFF;
+	font-size: 24px;
+	text-transform: uppercase;
+	font-weight: normal;
+	padding-top: 57px;
+}
+
+div.member_info h1 span{
+	font-size: 20px;
+	text-transform:capitalize;
+	padding-bottom: 80px;
+}
+
+div.member_info p{
+	color:#FFF;
+	font-size: 14px;
+	padding-top: 25px;
+	padding-right: 50px;
+	
+}
+
+div.member_info a img{
+	position: absolute;
+	bottom: 34px;
+	right: 34px;
+	width: 24px;
+}
+
+div#google_map {
+  height: 460px;
+ 
+  width: 100%;
+}
+
+div#google_map iframe {
+  border: 0 none;
+  height: 460px !important;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+div#google_map_logo {
+height: 221px;
+left: 19%;
+margin: 0 auto;
+opacity: 1;
+position: absolute;
+top: 127px;
+width: 377px;
+z-index: 25;
+}
+
+div#google_map_opacity {
+  background-color: #919396;
+  height: 460px;
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 20;
+}
+
+
+div#contact_us div#sheri_contactus{
+	background-color: #58585a;
+}
+
+
+div#contact_us input[type="text"],
+input[type="email"]
+{
+background-color: #e7e8e9;
+display: block;
+height: 47px;
+margin-bottom: 12px;
+margin-left: 61px;
+width: 1080px;
+padding-left: 25px;
+font-family: 'PT Serif', serif;
+	
+}
+
+
+div#contact_us input[placeholder], [placeholder], *[placeholder] {
+   color:#58585b !important;
+   font-size: 19.8px !important;
+}
+
+
+div#contact_us ::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #58585b;
+    font-size: 19.8px !important;
+}
+div#contact_us :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #58585b;
+   opacity:  1;
+   font-size: 19.8px !important;
+}
+div#contact_us ::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #58585b;
+   opacity:  1;
+   font-size: 19.8px !important;
+}
+div#contact_us :-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:    #58585b;
+   font-size: 19.8px !important;
+}
+
+
+
+
+div#contact_us textarea{
+background-color: #e7e8e9;
+font-family: "PT Serif",serif;
+height: 140px;
+margin-bottom: 12px;
+margin-left: 61px;
+padding-left: 25px;
+width: 1080px;
+padding-top: 10px;
+}
+
+
+div#contact_us input#letters_code.clear{
+	margin-left: 0;
+	width: 1080px;
+}
+
+
+div#contact_us input[type="submit"]
+{
+background-color: #818285;
+color: #fff;
+display: block;
+font-family: "PT Serif",serif;
+font-size: 22.5px;
+height: 47px;
+margin-bottom: 12px;
+margin-left: 61px;
+padding-left: 25px;
+text-transform: uppercase;
+width: 1080px;
+margin-top: 21px;
+cursor: pointer;	
+}
+
+
+div#contact_us div#sheri_contactus section hr{
+	background-color: #a7a9ac !important;
+}
+
+div.free_consultation_form div#sheri_contactus section p{
+	color:#FFF;
+	font-size: 16px;
+	line-height: 30px;
+	padding-top: 43px;
+	text-align: center;
+}
+
+div.free_consultation_form div#sheri_contactus{
+background-color: #58585a;
+display: block;
+height: 1300px;
+}
+
+
+div.free_consultation_form input[name="phone"]
+{
+background-color: #818285;
+color: #fff;
+display: block;
+font-family: "PT Serif",serif;
+font-size: 19.8px;
+height: 47px;
+margin-bottom: 12px;
+margin-left: 61px;
+padding-left: 25px;
+ 
+width: 517px !important;
+ 
+display: inline;
+float: left;	
+}
+
+select.leave_message{
+background-color: #e7e8e9;
+color: #58585b;
+display: inline;
+float: left;
+font-family: "PT Serif",serif;
+font-size: 19.8px;
+height: 47px;
+margin-bottom: 12px;
+margin-left: 45px;
+ 
+padding-left: 25px;
+width: 517px !important;
+}
+
+
+select.reason{
+background-color: #e7e8e9;
+color: #58585b;
+ display: inline;
+float: left;
+font-family: "PT Serif",serif;
+font-size: 19.8px;
+height: 47px;
+margin-bottom: 12px;
+margin-left: 61px;
+ 
+padding-left: 25px;
+width: 517px !important;
+}
+
+
+select.hear{
+background-color: #e7e8e9;
+color: #58585b;
+display: inline;
+float: left;
+font-family: "PT Serif",serif;
+font-size: 19.8px;
+height: 47px;
+margin-bottom: 12px;
+margin-left: 45px;
+ 
+padding-left: 25px;
+width: 517px !important;
+}
+
+
+div#resources_page div.about_resources{
+	width: 100%;
+	 
+	padding-top: 35px;
+	padding-bottom: 105px;
+}
+
+div.about_resources section h1{
+	color:#ee1c24;
+	font-size: 60px;
+	text-align: center;
+ 
+}
+
+div.about_resources section p{
+	padding-top: 40px;
+	color:#404041;
+	line-height: 30px;
+	text-align: center;
+}
+
+.first_item{
+	margin-left: 66px;
+}
+
+img.catalogue_item{
+	margin-right: 25px;
+	margin-top: 45px;
+	margin-bottom: 45px;
+}
+
+div.resources_single_page{
+	width: 100%;
+	min-height: 10px;
+	display: block;
+	padding-top: 37px;
+	padding-bottom: 37px;
+}
+
+div.resources_single_page section h1{
+	display: block;
+	color:#ee1c24;
+	font-size: 60px;
+	text-align: center;
+}
+
+div.resources_single_page section p{
+color: #404041;
+line-height: 30px;
+padding-bottom: 50px;
+padding-top: 27px;
+text-align: center;
+}
+
+div.resources_icon{
+display: inline;
+float: left;
+margin-left: 84px;
+width: 184px;
+padding-bottom: 21px;
+	
+}
+
+
+div.resources_media_icon{
+	display: block;
+ 
+/*height: 285px;*/
+width: 945px;
+margin-left: 84px;
+	
+}
+
+
+
+div.resources_icon div.title{
+	display: block;
+	text-align: center;
+	color:#ee1c24;
+	font-size: 18px;
+	text-transform: uppercase;
+}
+
+div.resources_icon div.sub_title{
+	display: block;
+	text-align: center;
+	color:#58585b;
+	font-size: 18px;
+	
+}
+
+
+div.resources_media_icon div.header{
+	display: inline;
+float: left;
+height: 237px;
+width: 215px;
+}
+
+div.resources_media_icon div.title{
+	width: 727px;
+	display: block;
+	padding-bottom: 4px;
+	color:#ee1c24;
+	font-size: 18px;
+	padding-top: 19px;
+	text-transform: uppercase;
+	float: left;
+}
+
+div.resources_media_icon div.sub_title{
+	width: 727px;
+	display: block;
+	padding-bottom: 4px;
+	color:#58585b;
+	font-size: 18px;
+	 
+	 
+	float: left;
+}
+
+div.resources_media_icon div.body{
+	width: 727px;
+	display: block;
+	padding-bottom: 4px;
+	color:#404041;
+	font-size: 16px;
+	 
+	 
+	float: left;
+}
+
+div.resources_faq_page section h1{
+color: #ee1c24;
+display: block;
+font-size: 60px;
+text-align: center;
+padding-top: 44px;
+}
+
+div.resources_faq_icon div.title{
+	color: #ee1c24;
+display: block;
+font-size: 24px;
+margin: 0 auto;
+padding-bottom: 40px;
+padding-top: 19px;
+text-align: center;
+ width: 988px;
+
+
+}
+
+div.resources_faq_icon div.body{
+color: #404041;
+display: block;
+line-height: 30px;
+margin: 0 auto;
+width: 988px;
+text-align: center;
+}
+
+section.faq_bottom_info{
+	text-align: center;
+	font-size: 21.6px;
+}
+
+div.blog_inner{
+	width: 100%;
+	padding-top: 53px;
+	padding-bottom: 45px;
+}
+
+div.blog_post{
+display: block;
+margin-bottom: 50px;
+margin-top: 50px;
+width: 1080px;
+position: relative;
+	
+}
+
+img.blog_left_align_image{
+	float: left;
+	padding-right: 30px;
+}
+
+img.blog_right_align_image{
+	float: right;
+	padding-left: 30px;
+}
+
+div.blog_post a h1{
+	color:#bf1e2d;
+	font-size: 23px;
+	font-weight: normal;
+}
+
+span.blog_post_date{
+	color:#6d6e70;
+	font-size: 17.9px;
+	padding-top: 17px;
+}
+
+div.blog_post p{
+	color:#404041;
+	font-size: 16.1px;
+	line-height: 30px;
+	padding-top: 42px;
+}
+
+button#load_more_articles{
+background-color: #cb2126;
+color: #fff;
+cursor: pointer;
+display: block;
+font-family: "PT Serif",serif;
+font-size: 22.5px;
+height: 47px;
+margin-bottom: 77px;
+text-transform: uppercase;
+width: 1200px;
+}
+
+a.read_more_button{
+background-color: #bf1e2d;
+bottom: 1px;
+color: #fff;
+cursor: pointer;
+display: inline;
+padding: 15px 28px;
+position: absolute;
+width: 176px;
+} 
+
+img.blog_full_featured_left_align{
+	float: left;
+	padding-right: 25px;
+}
+
+div.blog_full_post{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+div.blog_full_post p{
+color: #404041;
+font-size: 16.1px;
+line-height: 30px;
+padding-bottom: 15px;
+}
+
+h1.blog_full_h1{
+	color: #bf1e2d;
+font-size: 23px;
+font-weight: normal;
+padding-top: 32px;
+}
+
+img.alignright{
+	float: right;
+margin-left: 25px;
+}
+
+img.alignleft{
+	float: left;
+margin-right: 25px;
+}
+
+div.services_intro {
+  background-image: url("http://www.shfamilylaw.ca/wp-content/themes/sheri/images/background/aboutus_bg.png");
+  padding-bottom: 57px;
+  padding-top: 35px;
+}
+
+div.services_intro section p {
+color: #404041;
+line-height: 30px;
+padding-top: 30px;
+text-align: center;
+padding-bottom: 45px;
+}
+
+div.services_inner{
+	width: 100%;
+	margin-bottom: 1px;
+}
+
+div.services_header_red{
+	width: 100%;
+	height: 55px;
+	background-image: url(http://www.shfamilylaw.ca/wp-content/themes/sheri/images/background/red_tab_bg.png);
+	background-repeat: no-repeat;
+}
+
+div.services_header_red a h1{
+	padding-left: 107px;
+	padding-top: 27px;
+	color:#FFF;
+	font-size: 21.5px;
+	font-weight: normal;
+}
+
+ div.services_item_red p{
+color: #fff;
+font-size: 17.1px;
+line-height: 30px;
+padding-left: 102px;
+padding-top: 50px;
+padding-right: 83px;
+ }
+ 
+ div.services_content_red{
+background-color: #ee1c24;
+padding-bottom: 120px;
+position: relative;
+ }
+ 
+  div.services_content_white{
+  background-color: #e7e8e9;
+  padding-bottom: 120px;
+  position: relative;
+ }
+ 
+ 
+ 
+ 
+ 
+ div.services_header_white{
+	width: 100%;
+	height: 55px;
+	background-image: url(http://www.shfamilylaw.ca/wp-content/themes/sheri/images/background/white_tab_bg.png); 
+	background-repeat: no-repeat;
+}
+
+div.services_header_white a h1{
+	padding-left: 107px;
+	padding-top: 27px;
+	color:#58585b;
+	font-size: 21.5px;
+	font-weight: normal;
+}
+
+ div.services_item_white p{
+
+color: #58585b;
+font-size: 17.1px;
+line-height: 30px;
+padding-left: 102px;
+padding-top: 50px;
+padding-right: 83px;
+ }
+ 
+ 
+ div.services_item_white{
+ 	display: block;
+margin-top: -56px;
+position: relative;
+ 	 
+ }
+ 
+  div.services_item_red{
+ 	 	display: block;
+margin-top: -56px;
+position: relative;
+ 	 
+ }
+ 
+ a.services_read_more_button_red{
+border: 1px solid #fbc9b5;
+bottom: 32px;
+color: #fff;
+cursor: pointer;
+display: inline;
+padding: 15px 28px;
+position: absolute;
+right: 83px;
+ 
+ }
+ 
+ a.services_read_more_button_white{
+ border:1px solid #7c7d7f;
+bottom: 1px;
+color: #58585b;
+cursor: pointer;
+display: inline;
+padding: 15px 28px;
+position: absolute;
+ 
+bottom: 32px;
+right: 83px;
+ } 
+ 
+ div#last_4_posts_blog{
+overflow: hidden;
+padding-left: 60px;
+padding-top: 20px;
+width: 415px;
+padding-bottom: 20px;
+ }
+ 
+ div#last_4_posts_blog h3{
+ color: #fff;
+font-weight: normal;
+text-align: center;
+text-transform: uppercase;
+padding-top: 12px;
+ }
+ 
+ span.date_posted{
+color: #e96973;
+display: block;
+font-size: 13.5px;
+font-style: italic;
+font-weight: bold;
+text-align: center;
+padding-bottom: 30px;
+ }
+ 
+ div#last_4_posts_blog h3 a{
+ 	color:#FFF;
+ }
+ 
+ a.go_to_blog{
+ border-bottom: 1px solid #fff;
+color: #fff;
+display: block;
+font-size: 18.9px;
+margin: 0 auto;
+width: 173px;
+ }
+ 
+ div.footer_content.color_grey a{
+ 	color:#6d6e70;
+ }
+ 
+ 
+ div#testimonials {
+padding-bottom: 57px;
+padding-top: 35px;
+}
+
+div#testimonials section p {
+  color: #404041;
+line-height: 25px;
+padding-top: 30px;
+text-align: center;
+}
+
+
+img.divider_testimonials{
+margin-bottom: 43px;
+margin-top: 43px;
+width: 1100px;
+margin-left: 50px;
+}
+
+div#testimonials h2{
+	color:#6d6e70;
+	font-size: 19.7px;
+	display: block;
+	text-align: center;
+	font-weight: normal;
+	padding-top: 24px;
+}
+
+span.testimonial{
+color: #be1e2d;
+display: block;
+font-size: 19.7px;
+padding-bottom: 24px;
+text-align: center;
+padding-left: 100px;
+padding-right: 100px;
+}
+
+img#logo{
+	/*width: 85%;*/
+}
+
+div.member_pop_up_97
+{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	display: none; 
+	 
+	z-index: 100000;
+	left: 0;
+	top:0;
+}
+
+
+div.member_pop_up_96
+{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	display: none; 
+	 
+	z-index: 100000;
+	left: 0;
+	top:0;
+}
+
+div.member_pop_up_95
+{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	display: none; 
+	 
+	z-index: 100000;
+	left: 0;
+	top:0;
+}
+
+
+
+
+div.members_popup{
+left: 50%;
+margin-left: -600px;
+position: absolute;
+top: 45%;
+margin-top: -246px;
+}
+
+.display_show{
+	display: block !important;
+}
+
+
+a img.close_modal{
+	top: 34px;
+position: absolute;
+right: 34px;
+width: 24px;
+}
+
+
+div.about_us section h1,
+div#testimonials section h1,
+div.services_intro section h1
+ {
+  color: #ee1c24;
+  font-size: 60px;
+  text-align: center;
+}
+
+h1.h1_title{
+	  color: #ee1c24;
+  font-size: 60px;
+  text-align: center;
+}
+
+img.sheri_cs_logo{
+	width: 120px;
+	height: 120px;
+}
+
+img.call_us_icon{
+	float: left;
+height: 12px;
+margin-right: 9px;
+margin-top: 4px;
+width: 15px; 
+}
+
+div#sheri_intro section p{
+	color: #404041;
+line-height: 25px;
+ 
+text-align: center;
+}
+
+div.blog_inner section h1{
+	color: #ee1c24;
+font-size: 60px;
+text-align: center;
+}
+
+
+div#sheri_intro section{
+	background-image: url("http://shfamilylaw.ca/wp-content/themes/sheri/images/background/sheri-tr-bg.png");
+background-repeat: no-repeat;
+background-position: 255px 61px;
+}
+
+
+div.resources_media_icon div.title a,
+div.resources_icon div.title a
+{
+	color:#f11616;
+}
+
+
+
+
+div#page div.wrapper section h1{
+	color: #ee1c24;
+font-size: 60px;
+text-align: center;
+padding-top: 25px;
+}
